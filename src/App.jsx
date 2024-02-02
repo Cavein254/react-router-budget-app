@@ -1,10 +1,11 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
+import Dashboard, { DashboardLoader } from "./pages/Dashboard";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Dashboard />,
+    loader: DashboardLoader,
   },
   {
     path: "/:1d",
