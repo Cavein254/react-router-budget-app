@@ -8,15 +8,12 @@ const router = createBrowserRouter([
     path: "/",
     element: <Main />,
     loader: MainLoader,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
         element: <Dashboard />,
         loader: DashboardLoader,
-      },
-      {
-        path: "*",
-        element: <Error />,
       },
     ],
   },
