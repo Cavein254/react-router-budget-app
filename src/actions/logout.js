@@ -1,5 +1,7 @@
 import { redirect } from "react-router-dom";
+import { deleteItem } from "../helpers";
 
 export async function logoutAction() {
-  redirect("/");
+  deleteItem({ key: "userName" });
+  return redirect("/");
 }

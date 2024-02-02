@@ -19,7 +19,6 @@ const router = createBrowserRouter([
       },
       {
         path: "logout",
-        element: <p>Log out</p>,
         action: logoutAction,
       },
     ],
