@@ -1,5 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Dashboard, { DashboardLoader } from "./pages/Dashboard";
+import Error from "./pages/Error";
 
 const router = createBrowserRouter([
   {
@@ -8,8 +9,8 @@ const router = createBrowserRouter([
     loader: DashboardLoader,
   },
   {
-    path: "/:1d",
-    element: <h1>Home id</h1>,
+    path: "*",
+    element: <Error />,
   },
 ]);
 function App() {
