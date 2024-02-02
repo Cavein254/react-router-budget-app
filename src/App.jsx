@@ -1,9 +1,10 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <h1>Home Page</h1>,
+    element: <Dashboard />,
   },
   {
     path: "/:1d",
