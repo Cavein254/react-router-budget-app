@@ -8,15 +8,17 @@ const router = createBrowserRouter([
     path: "/",
     element: <Main />,
     loader: MainLoader,
-  },
-  {
-    path: "/",
-    element: <Dashboard />,
-    loader: DashboardLoader,
-  },
-  {
-    path: "*",
-    element: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Dashboard />,
+        loader: DashboardLoader,
+      },
+      {
+        path: "*",
+        element: <Error />,
+      },
+    ],
   },
 ]);
 function App() {
