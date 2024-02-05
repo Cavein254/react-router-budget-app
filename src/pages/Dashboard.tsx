@@ -6,8 +6,6 @@ import { toast } from "react-toastify";
 
 export const DashboardLoader = () => {
   const userName = fetchData("userName");
-  console.log("On dashBorad");
-  console.log(userName);
   return { userName };
 };
 
