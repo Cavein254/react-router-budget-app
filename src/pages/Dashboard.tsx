@@ -24,8 +24,6 @@ export async function dashboardAction({ request }) {
 
 const Dashboard = () => {
   const { userName } = useLoaderData();
-  console.log("---------------------------");
-  console.log(userName);
   return <div>{userName ? <h1>{userName}</h1> : <Intro />}</div>;
 };
 
