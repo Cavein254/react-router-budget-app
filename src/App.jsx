@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Dashboard, { DashboardLoader } from "./pages/Dashboard";
+import Dashboard, { DashboardLoader, dashboardAction } from "./pages/Dashboard";
 import Error from "./pages/Error";
 import Main, { MainLoader } from "./layout/Main";
 import { logoutAction } from "./actions/logout";
@@ -17,6 +17,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Dashboard />,
         loader: DashboardLoader,
+        action: dashboardAction,
         errorElement: <Error />,
       },
       {
